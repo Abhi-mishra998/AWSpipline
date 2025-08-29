@@ -1,0 +1,14 @@
+version: 0.2
+phases:
+  install:
+    commands:
+      - echo "Nothing to install for static site"
+  build:
+    commands:
+      - echo "Preparing artifact for CodeDeploy"
+artifacts:
+  files:
+    - appspec.yml
+    - html/**/*
+    - scripts/**/*
+``

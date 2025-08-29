@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Deployed via CodePipeline</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, system-ui, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 2rem 3rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      backdrop-filter: blur(10px);
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin: 0;
+    }
+
+    #ts {
+      font-weight: bold;
+      color: #ffd369;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <h1>🚀 Hello from <br> CodePipeline + CodeBuild + CodeDeploy ✅</h1>
+    <p>Deployed at: <span id="ts"></span></p>
+  </div>
+  <script>
+    function updateTime() {
+      document.getElementById('ts').textContent = new Date().toLocaleString();
+    }
+    updateTime();
+    setInterval(updateTime, 1000);
+  </script>
+</body>
+
+</html>
