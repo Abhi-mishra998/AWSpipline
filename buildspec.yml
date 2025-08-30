@@ -8,7 +8,6 @@ phases:
       - echo "Preparing artifact for CodeDeploy"
 artifacts:
   files:
-    - appspec.yml
     - html/**/*
     - scripts/**/*
 ``
