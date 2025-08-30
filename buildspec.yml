@@ -1,13 +1,11 @@
 version: 0.2
 phases:
-  install:
-    commands:
-      - echo "Nothing to install for static site"
   build:
     commands:
-      - echo "Preparing artifact for CodeDeploy"
+      - echo "Starting build"
+  post_build:
+    commands:
+      - echo "Build is completed ..copying files to S3"
 artifacts:
   files:
-    - html/**/*
-    - scripts/**/*
-``
+    - "**/*"
